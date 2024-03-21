@@ -9,6 +9,11 @@ class DefaultController{
         $this->productModel = new ProductModel($this->db);
     }
     public function Index() {
+
+        if (!SessionHelper::isLoggedIn()) {
+             header('Location: /sang5/account/login');
+             exit;
+        }
         
         $products = $this->productModel->readAll();
 

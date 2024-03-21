@@ -1,6 +1,8 @@
 <?php
 require_once 'config/database.php';
 require_once 'app/models/ProductModel.php';
+require_once 'app/models/AccountModel.php';
+require_once 'app/helpers/sessionHelper.php';
 
 $url = $_GET['url'] ?? '';
 $url = rtrim($url, '/');
