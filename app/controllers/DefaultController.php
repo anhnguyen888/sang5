@@ -10,10 +10,10 @@ class DefaultController{
     }
     public function Index() {
 
-        if (!SessionHelper::isLoggedIn()) {
-             header('Location: /sang5/account/login');
-             exit;
-        }
+        // if (!SessionHelper::isLoggedIn()) {
+        //      header('Location: /sang5/account/login');
+        //      exit;
+        // }
         
         $products = $this->productModel->readAll();
 
